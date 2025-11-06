@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/acceuil.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/output.css">
   </head>
   <body>
  <div class="bg-gray-900">
   
 <header class="bg-gray-900">
-  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
-        <img src="/public/youcode-logo.png" alt="" class="h-25 w-auto" />
+        <img src="/public/Dome Stars Flag Shield Logo.png" alt="" class="h-25 w-auto" />
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -27,25 +27,14 @@
     </div>
     <el-popover-group class="hidden lg:flex lg:gap-x-12">
 
-
-      <!-- <div class="relative">
-        <button popovertarget="desktop-menu-product" class="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-         Événements
-          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-500">
-            <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-          </svg>
-        </button>
-      </div> -->
-       
+    
       <a href="acceuil.html" class="text-sm/6 font-semibold text-blue-950  text-center  w-20 h-9 rounded-md bg-sky-500 hover:bg-stone-50">acceuil</a>
        <a href="#" class="text-sm/6 font-semibold text-blue-950 text-center w-20 h-9 rounded-md bg-sky-500 hover:bg-stone-50">Événements</a>
       <a href="#" class="text-sm/6 font-semibold text-blue-950 text-center w-20 h-9 rounded-md bg-sky-500 hover:bg-stone-50" >Formations</a>
       <a href="#" class="text-sm/6 font-semibold text-blue-950 text-center w-20 h-9  rounded-md  bg-sky-500 hover:bg-stone-50">jeux</a>
      
     </el-popover-group>
-    <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
-    </div> -->
+  
   </nav>
   <el-dialog>
     <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
@@ -53,7 +42,7 @@
         <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+              <span class="sr-only">Campus</span>
 
             </a>
             <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-400">
@@ -67,13 +56,6 @@
             <div class="-my-6 divide-y divide-white/10">
               <div class="space-y-2 py-6">
                 <div class="-mx-3">
-                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
-                    Product
-                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
-                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                    </svg>
-                  </button>
-                  
                 </div>
                
       
@@ -92,17 +74,15 @@
     </dialog>
   </el-dialog>
 </header>
- 
-<section>
+ </div>
+<!-- <section>
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
       <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
     </div>
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <!-- <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-400"><span aria-hidden="true" class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-        </div> -->
+        
       </div>
       <div class="text-center">
         <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">YouCode UM6P</h1>
@@ -118,6 +98,30 @@
     </div>
   </div>
 </div>
+</section> -->
+
+<main>
+  <h1 class="text-7xl font-semibold tracking-tight text-balance text-black sm:text-7xl text-center ">universcity</h1>
+</main>
+
+<section>
+
+  <div class="flex  justify-between ">
+    <a href="" class=" hover:bg-blue-300">
+      <img src="/public/calendar.png" alt="" class="h-25 w-auto  border-8  rounded-50  m-[20%]">
+    </a>
+ <a href="">
+  <img src="/public/gamepad (1).png" alt="" class=" h-25 w-auto">
+ </a>
+
+<a href="">
+  <img src="/public/book-user.png" alt="" class=" h-25 w-auto ">
+</a>
+<a href="">
+  <img src="/public/chart-histogram.png" alt="" class="  h-25 w-auto">
+</a>
+
+  </div>
 </section>
 
 
