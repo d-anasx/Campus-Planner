@@ -10,7 +10,7 @@ async function getData() {
     }
 
     result = await response.json();
-    console.log(result);
+    // console.log(result);
     displayData()
     getTotalEvents()
   } catch (error) {
@@ -22,7 +22,6 @@ async function getData() {
 function displayData(){
     let events_div = document.getElementById("events-section");
     result.forEach(e =>{
-        console.log("hi")
         let code = `
             <div
           class=" flex flex-col w-[23em] h-[15em] p-6 bg-gray-300 border border-gray-200 rounded-lg shadow-heavy"
@@ -59,7 +58,7 @@ function displayData(){
               />
             </svg>
           </a>
-            <div>
+            <div class="tools">
               <a  class="btn bg-blue-500" >edit</a>
               <a class="btn bg-red-600" >delete</a>
             </div>
@@ -80,3 +79,10 @@ function getTotalEvents(){
 getData()
 
 
+document.querySelector(".cardy").addEventListener('click', clickCard)
+
+
+
+function clickCard(){
+  console.log('hii');
+}
