@@ -25,21 +25,22 @@ function displayData(){
         console.log("hi")
         let code = `
             <div
-          class="w-[23em] h-[15em] p-6  bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+          class=" flex flex-col w-[23em] h-[15em] p-6 bg-gray-300 border border-gray-200 rounded-lg shadow-heavy"
         >
           <a href="#">
             <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "
             >
              ${e.title}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p class="mb-3 font-normal text-gray-700 ">
             ${e.description}
           </p>
-          <a
+          <div class="flex justify-between items-center mt-auto">
+              <a
             href="#"
-            class="inline-flex float-start items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class=" w-36  inline-flex items-center btn  "
           >
             Read more
             <svg
@@ -58,6 +59,11 @@ function displayData(){
               />
             </svg>
           </a>
+            <div>
+              <a  class="btn bg-blue-500" >edit</a>
+              <a class="btn bg-red-600" >delete</a>
+            </div>
+          </div>
         </div>
         `;
         events_div.innerHTML += code;
