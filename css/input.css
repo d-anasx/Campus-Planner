@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@iconify/tailwind4";
 
 
 /* 🌍 Global Styles */
@@ -76,4 +77,3 @@
     box-shadow: 0 8px 20px rgba(43, 6, 49, 0.292);
   }
 }
-
