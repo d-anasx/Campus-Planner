@@ -33,11 +33,12 @@ window.onload = function () {
     let hints = document.getElementById("hints")
     let word = document.getElementById("word")
     let reset = document.getElementById("resetbutton")
+    let scoreCounter
     reset.onclick = function () {
         userScore.score = 0
         localStorage.setItem("user", JSON.stringify(userScore))
-        scoreCounter = 0
-        scoreHolder.innerHTML = "votre score: " + scoreCounter
+        // scoreCounter = userScore.score
+        // scoreHolder.innerHTML = "votre score: " + scoreCounter
     }
     let next = document.getElementById("nextbutton")
     next.onclick = function () {
@@ -46,14 +47,13 @@ window.onload = function () {
     const scoreHistoryObj = localStorage.getItem("user");
     userScore = scoreHistoryObj ? JSON.parse(scoreHistoryObj) : { id: "", score: " " }
 
-
     qstSelected.push(qsts[indexAleatoire])
     // console.log(qstSelected[0])
     hints.textContent = qstSelected[0].hint
     keys.forEach(k => {
         keyBoard.innerHTML += `<button id="btn" class="btn" >${k}</button>`
     })
-    let scoreCounter = Number(userScore.score)
+    scoreCounter = Number(userScore.score)
     let scoreHolder = document.getElementById("score")
     scoreHolder.innerHTML = "votre score: " + scoreCounter
     let rep = qstSelected[0].nom
