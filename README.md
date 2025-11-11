@@ -35,3 +35,8 @@ Créer une application modulaire, responsive et agréable à utiliser, pensée p
 ✅ Données persistées via localStorage  
 ✅ UI / UX soignée  
 
+### ⚙️ TailwindCSS - Commande de compilation
+
+```sh
+npm install
+npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch
