@@ -72,6 +72,9 @@
     </dialog>
   </el-dialog>
 </header>
+ 
+  
+  
   <div class="grid gap-10 container">
     <section class="grid grid-cols-1  lg:grid-cols-2  hero-section  ">
       <div class="grid place-items-center"
@@ -79,13 +82,29 @@
         <p class=" font-semibold  text-white sm:text-3xl grid text-center ">Learn today’s most in-demand
           skills with our free online
           courses</p>
-        <button> <a class=" grid  place-items-center p-3 btn" href="creatcourse-page.html">Create
+        <button id="creatcourse"> <a class=" grid  place-items-center p-3 btn" href="#">Create
             Curse</a></button>
       </div>
       <img style="height: 390px; width: 100%;" src="./public/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="" srcset="">
     </section>
-
-
+    <div id="modal" class="hidden">
+  <form  id="curse-details" class=" grid place-content-center place-items-center gap-6">
+        <h1>Course Informations</h1>
+        <div class="input-control">
+            <input type="text" placeholder="course name" name="course-name" id="course-name">
+            <div name="course-name" class="errormessage"></div>
+        </div>
+        <div class="input-control">
+            <input type="text" placeholder="formater name" name="formater" id="Formater">
+            <div name="formater" class="errormessage"></div>
+        </div>
+        <div class="input-control">
+            <input placeholder="course duration by hours    " type="number" name="course-duration" id="course-duration">
+            <div name="course-duration" class="errormessage"></div>
+        </div>
+        <button id="Submit" class="btn">Submit</button>
+    </form>
+</div>
     <article style="background-color: rgba(227, 220, 220, 0.314);"
       class="grid grid-cols-2 gap-12 place-items-center p-10 mr-20 ml-20  self-devlopment">
       <div class="grid gap-3.5">

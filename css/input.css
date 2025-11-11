@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+
+/* 🌍 Global Styles */
+@layer base {
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #111827;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #130b20;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #130b20;
+  }
+}
+
+/* 🎛️ Reusable Components */
+@layer components {
+  .btn {
+    background-color: #794090;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #5b2e6f;
+  }
+
+  
+}
+
+/* 🎨 Optional Utilities Override */
+@layer utilities {
+  .text-primary {
+    color: #171432;
+  }
+
+  .text-secondary {
+    color: #f59e0b;
+  }
+
+  .bg-primary {
+    background-color: #794090;
+  }
+
+  .bg-secondary {
+    background-color: #f59e0b;
+  }
+
+  .font-main {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .shadow-light {
+    box-shadow: 0 2px 6px rgba(150, 5, 182, 0.664);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-heavy {
+    box-shadow: 0 8px 20px rgba(43, 6, 49, 0.292);
+  }
+}
+
