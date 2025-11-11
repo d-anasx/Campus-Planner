@@ -1,0 +1,16 @@
+.key-board{
+    
+    justify-content: space-around;
+    border: solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    /* padding: px; */
+}
+/* .keyboard{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
