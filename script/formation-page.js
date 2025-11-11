@@ -5,7 +5,6 @@ let submitcourseinfo = document.getElementById("Submit")
 submitcourseinfo.addEventListener("click", submitcourseinformation)
 createcoursebtn.addEventListener("click", Createcours)
 let output = ""
-// 9ad line dyal derution 
 let cursedetails = document.getElementById("curse-title")
 fetch("./data/formation.json")
    .then(res => res.json())
