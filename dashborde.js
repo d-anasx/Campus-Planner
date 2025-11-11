@@ -1,6 +1,6 @@
 let input = document.querySelector("input");
 
-let sections = document.querySelectorAll("section");
+let section = document.querySelector(".section__1");
 let header = document.querySelector("header");
 let footer = document.querySelector("footer");
 let span= document.getElementById("span");
@@ -20,9 +20,9 @@ function dark() {
     span.style.color='white';
 
     
-    sections.forEach(section=>{
+   
          section.style.backgroundColor = "black";
-    });
+  
    
     
 
@@ -34,9 +34,9 @@ function dark() {
     footer.style.backgroundColor = "white";
     span.style.color='var(--color-gray-600)';
 
-    sections.forEach(section=>{
+    
          section.style.backgroundColor = "white";
-    });
+  
    
      
     
