@@ -1,5 +1,5 @@
-
 @import "tailwindcss";
+@plugin "@iconify/tailwind4";
 
 
 /* 🌍 Global Styles */
