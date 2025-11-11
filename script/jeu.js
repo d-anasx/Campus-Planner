@@ -37,8 +37,8 @@ window.onload = function () {
     reset.onclick = function () {
         userScore.score = 0
         localStorage.setItem("user", JSON.stringify(userScore))
-        // scoreCounter = userScore.score
-        // scoreHolder.innerHTML = "votre score: " + scoreCounter
+        scoreCounter = userScore.score
+        scoreHolder.innerHTML = "votre score: " + scoreCounter
     }
     let next = document.getElementById("nextbutton")
     next.onclick = function () {
