@@ -32,7 +32,7 @@ function dark() {
     changes.style.color = "black";
     header.style.backgroundColor = "white";
     footer.style.backgroundColor = "white";
-    span.style.color='gray';
+    span.style.color='var(--color-gray-600)';
 
     sections.forEach(section=>{
          section.style.backgroundColor = "white";
