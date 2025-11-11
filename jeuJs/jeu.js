@@ -28,9 +28,6 @@ let userScore = {
     score: 0
 }
 
-
-
-
 window.onload = function () {
     let keyBoard = document.getElementById("key-board")
     let hints = document.getElementById("hints")
@@ -39,21 +36,22 @@ window.onload = function () {
     reset.onclick = function () {
         userScore.score = 0
         localStorage.setItem("user", JSON.stringify(userScore))
-        window.location.reload()
+        scoreCounter = 0
+        scoreHolder.innerHTML = "votre score: " + scoreCounter
     }
     let next = document.getElementById("nextbutton")
-    next.onclick=function(){
+    next.onclick = function () {
         window.location.reload()
     }
     const scoreHistoryObj = localStorage.getItem("user");
     userScore = scoreHistoryObj ? JSON.parse(scoreHistoryObj) : { id: "", score: " " }
-    
-    
+
+
     qstSelected.push(qsts[indexAleatoire])
     // console.log(qstSelected[0])
     hints.textContent = qstSelected[0].hint
     keys.forEach(k => {
-        keyBoard.innerHTML += `<button id="btn" class=key-board >${k}</button>`
+        keyBoard.innerHTML += `<button id="btn" class="btn" >${k}</button>`
     })
     let scoreCounter = Number(userScore.score)
     let scoreHolder = document.getElementById("score")
@@ -96,7 +94,7 @@ window.onload = function () {
     })
 
         ;
-    
+
 
 }
 
