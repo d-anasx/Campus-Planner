@@ -140,8 +140,44 @@ function newformation(e) {
    showcourses()
 
 }
-function students (event){
-   let myInputs = loginform.querySelectorAll("input");
-   event.preventDefault()
-   let studentinfo = {}
-}
+// function studentFormValidator() {
+//    let myInputs = myform.querySelectorAll("input")
+//    let wronginput = 0;
+//    console.log(myInputs)
+//    myInputs.forEach(input => {
+//       let value = input.value.trim()
+//       let regex = ValidateRules[input.name].regex
+//       let errormessage = document.getElementsByClassName("errormessage")[input.name];
+//       console.log(regex)
+
+//       if (!value.match(regex)) {
+//          errormessage.textContent = ValidateRules[input.name].errormessage
+//          errormessage.style.color = "red"
+//          input.style.border = " 3px solid red"
+//          wronginput++
+//       } else {
+//          input.style.border = "3px solid green"
+//          errormessage.textContent = ""
+
+
+//       }
+//    });
+
+//    return wronginput
+// }
+// function students (){
+//    let myInputs = loginform.querySelectorAll("input");
+//    let studentinfo = {}
+//     let wronginput = studentFormValidator()
+//    if (wronginput > 0) {
+//       return;
+//    } else {
+//       myInputs.forEach((input) => {
+//          studentinfo[input.name] = input.value
+//       });
+
+//       localStorage.setItem("data", JSON.stringify(newformation))
+//    }
+//    console.log(studentinfo)
+//    // formationsdetails.push(newformation);
+// }
