@@ -1,9 +1,9 @@
-// 1- task :fonction tvalider lform
+// 1- task : localstorage
 // method :
 let ValidateRules = {
    theme: {
       regex: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{3,}$/,
-      errormessage: "invilade Course name"
+      errormessage: "invilade course name"
    },
    trainer: {
       regex: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{3,}$/,
@@ -16,38 +16,60 @@ let ValidateRules = {
    capacity: {
       regex: /^\d+$/,
       errormessage: "invilade course capacity"
+   },
+   username: {
+      regex: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{3,}$/,
+      errormessage: "invilade username"
+   },
+   email: {
+      regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      errormessage: "invilade email"
+
+   },
+   password: {
+      regex: /^(\+?\d{1,3}[- ]?)?\d{9,10}$/,
+      errormessage: "invilade email"
+
    }
+
 }
 
-formationsdetails = [];
+let formationsdetails = [];
+let students = [];
 let courslist = document.querySelector("#courses-details")
+let login = document.getElementById("signup")
 let myform = document.getElementById("course-details")
 let createcoursebtn = document.getElementById("creatcourse")
 let modal = document.getElementById("addformation")
 let cursedetails = document.getElementById("curse-title")
-createcoursebtn.addEventListener("click", showform)
 let submit = document.getElementById("Submit")
+let entercoursebtn = document.getElementById("entercourse")
+let loginform = document.getElementById("signup")
 myform.addEventListener('submit', newformation)
+createcoursebtn.addEventListener("click", showform)
+
 //  submit.addEventListener("click",newformation)
 
 //  here I fech the data 
-fetch("../data/formation.json")
-   .then(res => res.json())
-   .then(data => {
-      formationsdetails = data
-      
-      showcourses()
-   })
-
+if (typeof (localStorage.getItem("data")) == "object") {
+   fetch("../data/formation.json")
+      .then(res => res.json())
+      .then(data => {
+         localStorage.setItem("data", JSON.stringify(data))
+         formationsdetails = JSON.parse(localStorage.getItem("data"))
+      })
+} else {
+   formationsdetails = JSON.parse(localStorage.getItem("data"))
+   showcourses()
+}
 // fonction of display the data 
 function showcourses() {
    let output = ""
 
    for (let item of formationsdetails) {
-
       output += `
             
-        <div id="course-details" class="bg-white p-10 grid place-content-center   gap-5  curse-details">
+        <div id="course-details" class="bg-white p-4 grid place-content-center   gap-5  curse-details">
                   <img   src="../public/coding.jpg" alt="code";>
                <p  id="curse-title"><bold class = "font-bold">Title : </bold>${item.theme}</p>
                 <p id="formater-name"><bold class = "font-bold">Formater : </bold> ${item.trainer} </p>
@@ -55,13 +77,12 @@ function showcourses() {
                 <p class = "grid grid-cols-3"  id="course-duration"><bold class = "font-bold">Duration :  </bold>${item.duration}h
                 <span><img height="20px" width="20px" src="../public/three-o-clock-clock.png"></span> </p>
                <p class = "grid grid-cols-3"><bold class = "font-bold">Capacity</bold> : ${item.participants.length}/${item.capacity}<span><img height="20px" width="20px" src="../public/user.png"></span></p>
-            <button class="grid place-content-center"> <a class=" grid  place-items-center  btn" href="#">Start The
+            <button id="entercourse" class="grid place-content-center"> <a class=" grid  place-items-center  btn" href="#">Start The
                 course</a></button>
           </div>
 
    
      `;
-      console.log(formationsdetails)
       courslist.innerHTML = output
    }
 }
@@ -89,7 +110,7 @@ function FormValidator() {
          input.style.border = "3px solid green"
          errormessage.textContent = ""
 
-        
+
       }
    });
 
@@ -103,18 +124,24 @@ function newformation(e) {
       participants: []
    }
    let wronginput = FormValidator()
-   if (wronginput>0) {
-     return;
+   if (wronginput > 0) {
+      return;
    } else {
       myInputs.forEach((input) => {
          newformation[input.name] = input.value
       });
 
+      localStorage.setItem("data", JSON.stringify(newformation))
    }
    console.log(newformation)
    formationsdetails.push(newformation);
    modal.style.display = "none"
-
+   localStorage.setItem("data", JSON.stringify(formationsdetails))
    showcourses()
 
+}
+function students (event){
+   let myInputs = loginform.querySelectorAll("input");
+   event.preventDefault()
+   let studentinfo = {}
 }
