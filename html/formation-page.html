@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/output.css">
   <title>Formation</title>
+
 </head>
 
 <body>
@@ -68,13 +69,13 @@
                   <div class="-mx-3">
 
                   </div>
-                  <a href="#"
+                  <a href="acceuil.html"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Acceuil</a>
-                  <a href="#"
+                  <a href="events.html"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Evenememt</a>
-                  <a href="#"
+                  <a href="formation-page.html"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Formation</a>
-                  <a href="#"
+                  <a href="jeu.html"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Jeux</a>
                 </div>
 
@@ -85,9 +86,6 @@
       </dialog>
     </el-dialog>
   </header>
-
-
-
   <div class="grid gap-10 container">
     <section class="grid grid-cols-1  lg:grid-cols-2  hero-section  ">
       <div class="grid place-items-center"
@@ -96,25 +94,33 @@
           skills with our free online
           courses</p>
         <button id="creatcourse"> <a class=" grid  place-items-center p-3 btn" href="#">Create
-            Curse</a></button>
+            Course</a></button>
       </div>
       <img style="height: 390px; width: 100%;" src="../public/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="" srcset="">
     </section>
-    <div id="modal" class="hidden">
-      <form id="curse-details" class=" grid place-content-center place-items-center gap-6">
+    <div id="addformation" class="hidden">
+      <form id="course-details" class=" grid place-content-center place-items-center gap-6">
         <h1>Course Informations</h1>
         <div class="input-control">
-          <input type="text" placeholder="course name" name="course-name" id="course-name" class="p-1">
-          <div name="course-name" class="errormessage"></div>
+          <input type="text" placeholder="course name" name="theme" id="course-name" class="p-1 border-2 rounded-sm">
+          <div name="theme" class="errormessage"></div>
+
+
         </div>
         <div class="input-control">
-          <input type="text" placeholder="formater name" name="formater" id="Formater" class="p-1">
-          <div name="formater" class="errormessage"></div>
+          <input type="text" placeholder="formater name" name="trainer" id="Formater" class="p-1 border-2 rounded-sm">
+          <div name="trainer" class="errormessage"></div>
+
         </div>
         <div class="input-control">
-          <input placeholder="course duration by hours    " type="number" name="course-duration" id="course-duration"
-            class="p-1">
-          <div name="course-duration" class="errormessage"></div>
+          <input placeholder="course duration by hours    " type="number" name="duration" id="course-duration"
+            class="p-1 border-2 rounded-sm">
+          <div name="duration" class="errormessage"></div>
+        </div>
+        <div class="input-control">
+          <input placeholder="The limite of participants" type="number" name="capacity" id="course-duration"
+            class="p-1 border-2 rounded-sm">
+          <div name="capacity" class="errormessage"></div>
         </div>
         <button id="Submit" class="btn">Submit</button>
       </form>
@@ -128,7 +134,8 @@
   left: 50% ;;
   transform: translate(-50%, -50%); width: 90%" src="../public/certificate.jpeg" alt="">
         </div>
-        <button class="grid m-auto"> <a class="grid place-content-center p-3 btn" href="#">Your Certificate</a></button>
+        <button class="grid m-auto"> <a class="grid place-content-center p-3  btn" href="#">Your
+            Certificate</a></button>
       </div>
       <div class="grid grid-cols-1 gap-16 skills ">
 
@@ -170,11 +177,32 @@
         </div>
       </div>
       <div id="courses-details" style="background-color: rgba(227, 220, 220, 0.314);"
-        class="grid grid-cols-4 gap-4 p-10 mr-20 ml-20  mt-10">
+        class="grid grid-cols-4 gap-4 p-10 mr-20 ml-20  mt-10 relative">
 
 
 
       </div>
+      <section id="modal" class="bg-white grid place-content-center">
+        <form id="course-details" class=" grid place-content-center place-items-center gap-6">
+          <h1>Sign up</h1>
+          <div class="input-control">
+            <input type="text" placeholder="Username" name="username" id="username" class="p-1 border-2 rounded-sm">
+            <div name="username" class="errormessage"></div>
+
+
+          </div>
+          <div class="input-control">
+            <input type="text" placeholder="Email" name="Email" id="Email" class="p-1 border-2 rounded-sm">
+            <div name="Email" class="errormessage"></div>
+
+          </div>
+          <div class="input-control">
+            <input placeholder="password" type="password" name="password" id="password" class="p-1 border-2 rounded-sm">
+            <div name="password" class="errormessage"></div>
+          </div>
+          <button id="Submit" class="btn">Submit</button>
+        </form>
+      </section>
     </div>
     <footer class="footer">
       <div class="flex gap-20 bg-white text-amber-50">
@@ -201,8 +229,8 @@
       </div>
 
     </footer>
-
     <script src="../script/formation-page.js"></script>
+
 </body>
 
 </html>
