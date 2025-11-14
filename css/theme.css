@@ -17,7 +17,7 @@
     }
     .theme-card{ background:var(--card-bg); color:var(--card-text); padding:16px; border-radius:8px; transition: .2s; box-shadow: var(--shadow) ;}
     .theme-muted  { color:var(--muted-text); transition: .2s;}
-     h1 , header { color:var(--card-text); transition: .2s;}
+     h1 ,h2, header { color:var(--card-text); transition: .2s;}
     body{ font-family: system-ui; background:#f0f6fb; padding:20px;transition: .2s }
     html.dark body{ background:#071024;transition: .2s }
 
