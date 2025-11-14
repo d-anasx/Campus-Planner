@@ -35,21 +35,13 @@ let ValidateRules = {
 }
 
 let formationsdetails = [];
-let students = [];
 let courslist = document.querySelector("#courses-details")
-let login = document.getElementById("signup")
 let myform = document.getElementById("course-details")
 let createcoursebtn = document.getElementById("creatcourse")
 let modal = document.getElementById("addformation")
 let cursedetails = document.getElementById("curse-title")
-let submit = document.getElementById("Submit")
-let entercoursebtn = document.getElementById("entercourse")
-let loginform = document.getElementById("signup")
 myform.addEventListener('submit', newformation)
 createcoursebtn.addEventListener("click", showform)
-
-//  submit.addEventListener("click",newformation)
-
 //  here I fech the data 
 if (typeof (localStorage.getItem("data")) == "object") {
    fetch("../data/formation.json")
@@ -62,6 +54,11 @@ if (typeof (localStorage.getItem("data")) == "object") {
    formationsdetails = JSON.parse(localStorage.getItem("data"))
    showcourses()
 }
+let joincoursebtn = document.querySelectorAll(".entercourse")
+joincoursebtn.array.forEach(btn => {
+   let formationnumber = btn.name
+
+});
 // fonction of display the data 
 function showcourses() {
    let output = ""
@@ -69,7 +66,7 @@ function showcourses() {
    for (let item of formationsdetails) {
       output += `
             
-        <div id="course-details" class="bg-white p-4 grid place-content-center   gap-5  curse-details">
+        <div name = "${item.id}"  id="course-details" class="bg-white p-4 grid place-content-center   gap-5  curse-details">
                   <img   src="../public/coding.jpg" alt="code";>
                <p  id="curse-title"><bold class = "font-bold">Title : </bold>${item.theme}</p>
                 <p id="formater-name"><bold class = "font-bold">Formater : </bold> ${item.trainer} </p>
@@ -77,7 +74,7 @@ function showcourses() {
                 <p class = "grid grid-cols-3"  id="course-duration"><bold class = "font-bold">Duration :  </bold>${item.duration}h
                 <span><img height="20px" width="20px" src="../public/three-o-clock-clock.png"></span> </p>
                <p class = "grid grid-cols-3"><bold class = "font-bold">Capacity</bold> : ${item.participants.length}/${item.capacity}<span><img height="20px" width="20px" src="../public/user.png"></span></p>
-            <button id="entercourse" class="grid place-content-center"> <a class=" grid  place-items-center  btn" href="#">Start The
+            <button class="entercourse" class="grid place-content-center"> <a class=" grid  place-items-center  btn" href="login-page.html">Start The
                 course</a></button>
           </div>
 
@@ -111,6 +108,7 @@ function FormValidator() {
          errormessage.textContent = ""
 
 
+
       }
    });
 
@@ -140,44 +138,3 @@ function newformation(e) {
    showcourses()
 
 }
-// function studentFormValidator() {
-//    let myInputs = myform.querySelectorAll("input")
-//    let wronginput = 0;
-//    console.log(myInputs)
-//    myInputs.forEach(input => {
-//       let value = input.value.trim()
-//       let regex = ValidateRules[input.name].regex
-//       let errormessage = document.getElementsByClassName("errormessage")[input.name];
-//       console.log(regex)
-
-//       if (!value.match(regex)) {
-//          errormessage.textContent = ValidateRules[input.name].errormessage
-//          errormessage.style.color = "red"
-//          input.style.border = " 3px solid red"
-//          wronginput++
-//       } else {
-//          input.style.border = "3px solid green"
-//          errormessage.textContent = ""
-
-
-//       }
-//    });
-
-//    return wronginput
-// }
-// function students (){
-//    let myInputs = loginform.querySelectorAll("input");
-//    let studentinfo = {}
-//     let wronginput = studentFormValidator()
-//    if (wronginput > 0) {
-//       return;
-//    } else {
-//       myInputs.forEach((input) => {
-//          studentinfo[input.name] = input.value
-//       });
-
-//       localStorage.setItem("data", JSON.stringify(newformation))
-//    }
-//    console.log(studentinfo)
-//    // formationsdetails.push(newformation);
-// }
