@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/output.css">
   <title>Formation</title>
+
 </head>
 
 <body>
@@ -64,17 +65,12 @@
                 <a href="formation-page.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Formation</a>
                 <a href="jeu.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-500 hover:text-emerald-400">Jeux</a>
               </div>
-              
             </div>
-          </div>
-        </el-dialog-panel>
-      </div>
-    </dialog>
-  </el-dialog>
-</header>
- 
-  
-  
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+  </header>
   <div class="grid gap-10 container">
     <section class="grid grid-cols-1  lg:grid-cols-2  hero-section  ">
       <div class="grid place-items-center"
@@ -83,16 +79,23 @@
           skills with our free online
           courses</p>
         <button id="creatcourse"> <a class=" grid  place-items-center p-3 btn" href="#">Create
-            Curse</a></button>
+            Course</a></button>
       </div>
       <img style="height: 390px; width: 100%;" src="../public/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="" srcset="">
     </section>
-    <div id="modal" class="hidden">
-  <form  id="curse-details" class=" grid place-content-center place-items-center gap-6">
+    <div id="addformation" class="hidden">
+      <form id="course-details" class=" grid place-content-center place-items-center gap-6">
         <h1>Course Informations</h1>
         <div class="input-control">
-            <input type="text" placeholder="course name" name="course-name" id="course-name">
-            <div name="course-name" class="errormessage"></div>
+          <input type="text" placeholder="course name" name="theme" id="course-name" class="p-1 border-2 rounded-sm">
+          <div name="theme" class="errormessage"></div>
+
+
+        </div>
+        <div class="input-control">
+          <input type="text" placeholder="formater name" name="trainer" id="Formater" class="p-1 border-2 rounded-sm">
+          <div name="trainer" class="errormessage"></div>
+
         </div>
         <div class="input-control">
             <input type="text" placeholder="formater name" name="formater" id="Formater">
@@ -100,22 +103,24 @@
 
         </div>
         <div class="input-control">
-            <input placeholder="course duration by hours    " type="number" name="course-duration" id="course-duration">
-            <div name="course-duration" class="errormessage"></div>
+          <input placeholder="The limite of participants" type="number" name="capacity" id="course-duration"
+            class="p-1 border-2 rounded-sm">
+          <div name="capacity" class="errormessage"></div>
         </div>
         <button id="Submit" class="btn">Submit</button>
-    </form>
-</div>
+      </form>
+    </div>
     <article style="background-color: rgba(227, 220, 220, 0.314);"
       class="grid grid-cols-2 gap-12 place-items-center p-10 mr-20 ml-20  self-devlopment">
       <div class="grid gap-3.5">
-        <div style="background-image: url(public/cadre.jpg); background-size: cover;"
+        <div style="background-image: url(../public/cadre.jpg); background-size: cover;"
           class=" border-6 border-blue-800 w-120 h-84 relative  certificate">
           <img class="border-4 absolute border-yellow-400 " style="top: 50%;
   left: 50% ;;
   transform: translate(-50%, -50%); width: 90%" src="../public/certificate.jpeg" alt="">
         </div>
-        <button class="grid m-auto"> <a class="grid place-content-center p-3 btn" href="#">Your Certificate</a></button>
+        <button class="grid m-auto"> <a class="grid place-content-center p-3  btn" href="#">Your
+            Certificate</a></button>
       </div>
       <div class="grid grid-cols-1 gap-16 skills ">
 
@@ -157,42 +162,39 @@
         </div>
       </div>
       <div id="courses-details" style="background-color: rgba(227, 220, 220, 0.314);"
-        class="grid grid-cols-4 gap-10 p-10 mr-20 ml-20 curses-list mt-10">
-        
-        </div>
+        class="grid grid-cols-4 gap-4 p-10 mr-20 ml-20  mt-10 relative">
 
 
 
       </div>
-
+    
     </div>
-  </div>
-  </div>
-  <footer class="footer">
+    <footer class="footer">
       <div class="flex gap-20 bg-white text-amber-50">
         <div class="ml-30">
-      <ul>
-        <li><a href="acceuil.html" alt="" class=" text-black hover:text-emerald-400">Acceul</li>
-
-         <li><a href="" alt="" class="text-black hover:text-emerald-400">Evenememt</li>
-
-           <li><a href="" alt="" class=" text-black hover:text-emerald-400">Formation</li>
-
-             <li><a href="" alt="" class=" text-black hover:text-emerald-400">Jeux</li>
-
-              <li><a href="dashbord.html" class=" text-black hover:text-emerald-400">dashborde</a></li>
-          </ul>
-      </div>
           <ul>
-            <li><a href="" class=" text-black hover:text-emerald-400">Support</a></li>
-            <li> <a href="" class=" text-black hover:text-emerald-400">contact</a></li>
-            <li><a href="" class=" text-black hover:text-emerald-400">log in</a></li>
+            <li><a href="acceuil.html" alt="" class=" text-black hover:text-emerald-400">Acceul</li>
+
+            <li><a href="" alt="" class="text-black hover:text-emerald-400">Evenememt</li>
+
+            <li><a href="" alt="" class=" text-black hover:text-emerald-400">Formation</li>
+
+            <li><a href="" alt="" class=" text-black hover:text-emerald-400">Jeux</li>
+
+            <li><a href="dashbord.html" class=" text-black hover:text-emerald-400">dashborde</a></li>
           </ul>
+        </div>
+        <ul>
+          <li><a href="" class=" text-black hover:text-emerald-400">Support</a></li>
+          <li> <a href="" class=" text-black hover:text-emerald-400">contact</a></li>
+          <li><a href="" class=" text-black hover:text-emerald-400">log in</a></li>
+        </ul>
 
           <img src="../public/Dome Stars Flag Shield Logo.png" alt="" class="w-40 h-40 justify-end ml-178">
       </div>
 
     </footer>
+    <script src="../script/formation-page.js"></script>
 
   <script src="../script/formation-page.js"></script>
 </body>
