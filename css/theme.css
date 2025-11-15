@@ -1,0 +1,75 @@
+:root{
+      --card-bg:#cecece;
+      --card-text:#0f172a;
+      --muted-text:#475569;
+      --shadow : 0 8px 20px rgba(43, 6, 49, 0.292);
+
+        --light: #fcd34d; /* sun color */
+  --dark: #28292c;  /* moon color */
+  --track-dark: #4b5563;
+  --track-light: #e5e7eb;
+    }
+    html.dark{
+      --card-bg:#0f172a;
+      --card-text:#e6eef8;
+      --muted-text:#adaeb1;
+      --shadow :  0 8px 20px rgba(229, 181, 236, 0.292);
+    }
+    .theme-card{ background:var(--card-bg); color:var(--card-text); padding:16px; border-radius:8px; transition: .2s; box-shadow: var(--shadow) ;}
+    .theme-muted  { color:var(--muted-text); transition: .2s;}
+     h1 ,h2, header { color:var(--card-text); transition: .2s;}
+    body{ font-family: system-ui; background:#f0f6fb; padding:20px;transition: .2s }
+    html.dark body{ background:#071024;transition: .2s }
+
+
+
+
+/* Container */
+.toggle-switch {
+  width: 60px;   /* smaller */
+  height: 30px;  /* smaller */
+  position: relative;
+}
+
+/* Track */
+.toggle-switch label {
+  width: 100%;
+  height: 100%;
+  background-color: var(--track-dark);
+  border-radius: 50px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+/* Hide checkbox */
+.toggle-switch input {
+  display: none;
+}
+
+/* Circle (moon/sun) */
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;   /* smaller */
+  height: 24px;  /* smaller */
+  border-radius: 50%;
+  background-color: var(--dark);
+  box-shadow: inset 7px -2px 0 0 var(--light); /* crescent for moon */
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+/* Light mode track */
+.toggle-switch input:checked ~ .slider {
+  background-color: var(--track-light);
+}
+
+/* Light mode circle (sun) */
+.toggle-switch input:checked ~ .slider::before {
+  transform: translateX(30px);
+  background-color: var(--light);
+  box-shadow: none; /* remove moon crescent */
+}

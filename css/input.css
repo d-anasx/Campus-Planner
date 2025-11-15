@@ -6,8 +6,6 @@
 @layer base {
   html, body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
-    color: #111827;
     margin: 0;
     padding: 0;
   }
@@ -15,13 +13,11 @@
   h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #130b20;
   }
 
   h2 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #130b20;
   }
 }
 
@@ -38,7 +34,36 @@
 
   .btn:hover {
     background-color: #5b2e6f;
+    
   }
+  .btn2 {
+    background-color: green;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+
+  .btn2:hover {
+    background-color:green;
+    
+  }
+  .btn3 {
+    background-color: red;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+
+  .btn3:hover {
+    background-color:red;
+    
+  }
+
+
 
   
 }
@@ -77,3 +102,4 @@
     box-shadow: 0 8px 20px rgba(43, 6, 49, 0.292);
   }
 }
+
